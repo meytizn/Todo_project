@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
+import TodoList from "./components/optionals/TodoList";
 
 
 
@@ -92,15 +93,9 @@ export default function Home() {
 
 
         <div className="w-[90%] my-5 text-left flex flex-col gap-y-5">
-          {todos.map((todo) => (
-            <div key={todo.uuid} className="flex flex-row justify-between bg-green-300 h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
-              <div className="text-left">{todo.id} - {todo.title}</div>
-              <div className="w-[25%] flex flex-row justify-between">
-                <div>Edit</div>
-                <div>Delete</div>
-              </div>
-            </div>
-          ))}
+
+          <TodoList todos={todos}/>
+
         </div>
       </div>
     </>
