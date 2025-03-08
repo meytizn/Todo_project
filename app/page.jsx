@@ -18,6 +18,9 @@ export default function Home() {
 
 
   
+  
+
+  // methods
 
 
   function addhandler(){
@@ -46,7 +49,6 @@ export default function Home() {
       if(event.target.value == ""){
         alert("you cant leave the blank empty ")
       }
-      
       else{
         setID(id+1)
         let newobj={uuid:uuidv4(),id:id,title:event.target.value,status:false}
@@ -58,6 +60,8 @@ export default function Home() {
 
     }
   }
+
+// end methods
 
 
   return (
