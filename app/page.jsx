@@ -62,6 +62,21 @@ export default function Home() {
     }
   }
 
+
+  function statushandler(todouuid){
+    let updatedtodo= todos.map(
+      (todo)=>{
+      if (todo.uuid==todouuid) {
+        todo.status=!todo.status
+        return todo
+      }
+      return todo
+    }
+  )
+
+    setTodos(updatedtodo)
+
+  }
 // end methods
 
 
@@ -94,7 +109,7 @@ export default function Home() {
 
         <div className="w-[90%] my-5 text-left flex flex-col gap-y-5">
 
-          <TodoList todos={todos}/>
+          <TodoList todos={todos} statushandler={statushandler}/>
 
         </div>
       </div>
