@@ -1,5 +1,6 @@
 import React from 'react'
 import TodoDelete from './TodoDelete'
+import TodoEdit from './TodoEdit'
 
 export default function TodoItem({todo ,statushandler,deleteTodoFunc}) {
   return (
@@ -11,7 +12,7 @@ export default function TodoItem({todo ,statushandler,deleteTodoFunc}) {
                 
                 </div>
               <div className="w-[25%] flex flex-row justify-between">
-                <div>Edit</div>
+                <TodoEdit/>
                 <TodoDelete todo={todo} deleteTodoFunc={deleteTodoFunc}/>
               </div>
             </div>
