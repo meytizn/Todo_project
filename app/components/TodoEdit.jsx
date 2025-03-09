@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function TodoEdit() {
+export default function TodoEdit({todo,setEditMode}) {
   return (
     <>
-    <div>Edit</div>
+    <button onClick={()=>setEditMode(true)}>Edit</button>
     </>
   )
 }
