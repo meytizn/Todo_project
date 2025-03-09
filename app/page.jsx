@@ -103,7 +103,7 @@ function deleteTodoFunc(todouuid){
       <div className="w-full md:w-1/2 bg-red-400 m-auto flex flex-col items-center md:my-20 md:rounded-lg">
         <div className="w-[90%] my-5">
           <input
-          onKeyDown={addtodo}
+          onKeyDown={()=>addtodo(event)}
             placeholder="Type something to do..."
             id="inputtodo"
             type="text"
