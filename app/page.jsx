@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
-import TodoList from "./components/optionals/TodoList";
+import TodoList from "./components/TodoList";
 
 
 
@@ -77,6 +77,23 @@ export default function Home() {
     setTodos(updatedtodo)
 
   }
+
+
+
+
+
+function deleteTodoFunc(todouuid){
+    // alert(todouuid)
+    let todos_overiting = todos.filter(
+      (todo)=>{
+        return todo.uuid != todouuid
+      }   
+    )
+    setTodos(todos_overiting)
+  }
+
+
+
 // end methods
 
 
@@ -109,7 +126,7 @@ export default function Home() {
 
         <div className="w-[90%] my-5 text-left flex flex-col gap-y-5">
 
-          <TodoList todos={todos} statushandler={statushandler}/>
+          <TodoList todos={todos} statushandler={statushandler} deleteTodoFunc={deleteTodoFunc}/>
 
         </div>
       </div>

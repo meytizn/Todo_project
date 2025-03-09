@@ -1,10 +1,10 @@
 import React from 'react'
+import TodoDelete from './TodoDelete'
 
-export default function TodoList({todos ,statushandler}) {
+export default function TodoItem({todo ,statushandler,deleteTodoFunc}) {
   return (
     <>
-              {todos.map((todo) => (
-            <div key={todo.uuid} className="flex flex-row justify-between bg-green-300 h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
+                <div key={todo.uuid} className="flex flex-row justify-between bg-green-300 h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
               <div className={`text-left ${todo.status ? "line-through  " : ""}`}>
 
                <input checked={todo.status} type="checkbox" onChange={()=>{statushandler(todo.uuid)}} />     {todo.id} - {todo.title}
@@ -12,10 +12,9 @@ export default function TodoList({todos ,statushandler}) {
                 </div>
               <div className="w-[25%] flex flex-row justify-between">
                 <div>Edit</div>
-                <div>Delete</div>
+                <TodoDelete todo={todo} deleteTodoFunc={deleteTodoFunc}/>
               </div>
             </div>
-          ))}
     </>
   )
 }
