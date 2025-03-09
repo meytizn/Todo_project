@@ -8,7 +8,7 @@ export default function TodoList({todos ,statushandler,deleteTodoFunc}) {
     <>
               {todos.map((todo) => (
 
-              <TodoItem todo={todo} statushandler={statushandler} deleteTodoFunc={deleteTodoFunc} />
+              <TodoItem key={todo.uuid} todo={todo} statushandler={statushandler} deleteTodoFunc={deleteTodoFunc} />
 
             // <div key={todo.uuid} className="flex flex-row justify-between bg-green-300 h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
             //   <div className={`text-left ${todo.status ? "line-through  " : ""}`}>
