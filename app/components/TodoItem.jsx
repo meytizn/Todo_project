@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import TodoDelete from './TodoDelete'
 import TodoEdit from './TodoEdit'
 
-export default function TodoItem({todo ,statushandler,deleteTodoFunc}) {
+export default function TodoItem({todo ,statushandler,deleteTodoFunc,changehandler}) {
   let [editmode , setEditMode]=useState(false)
 
   // methods
@@ -11,6 +11,7 @@ function editmode_keydown(event){
 
   if(event.key=="Enter"){
     // alert(event.target.value)
+    changehandler(todo.uuid,event.target.value)
     setEditMode(false)
   }
 

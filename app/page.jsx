@@ -94,6 +94,19 @@ function deleteTodoFunc(todouuid){
 
 
 
+  function changehandler(todouuid,todotitle){
+    let changing_todo = todos.map(
+      (todo)=>{
+        if (todo.uuid==todouuid){
+          todo.title=todotitle
+          return todo
+        }
+        return todo
+      }
+    )
+    setTodos(changing_todo)
+  }
+
 // end methods
 
 
@@ -126,7 +139,7 @@ function deleteTodoFunc(todouuid){
 
         <div className="w-[90%] my-5 text-left flex flex-col gap-y-5">
 
-          <TodoList todos={todos} statushandler={statushandler} deleteTodoFunc={deleteTodoFunc}/>
+          <TodoList todos={todos} statushandler={statushandler} deleteTodoFunc={deleteTodoFunc} changehandler={changehandler}/>
 
         </div>
       </div>
