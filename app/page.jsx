@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
 import TodoList from "./components/TodoList";
+import Link from "next/link";
 
 
 
@@ -143,6 +144,22 @@ function deleteTodoFunc(todouuid){
 
         </div>
       </div>
+
+
+
+
+
+
+      {/* multiLanguage app */}
+
+      <div className="flex flex-row justify-center items-center text-center   text-[20px] my-10">
+      <div className=" bg-blue-500 p-5 rounded-md"><Link href="/multiLanguage/" >Language_application </Link></div>
+        </div>
+        {/* End Language app */}
+
+
+
+
     </>
   )
 }

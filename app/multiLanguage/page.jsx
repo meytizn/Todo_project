@@ -16,8 +16,7 @@ export default function MultiLanguage() {
 
     <ContextProvider>
 
-    <div>Main components
-    </div>
+
     <Parrent/> 
 
     </ContextProvider>
