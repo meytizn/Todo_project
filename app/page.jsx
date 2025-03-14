@@ -114,7 +114,7 @@ function deleteTodoFunc(todouuid){
   return (
    <>
 
-      <div className="w-full md:w-1/2 bg-red-400 m-auto flex flex-col items-center md:my-20 md:rounded-lg">
+      <div className="w-full md:w-1/2 bg-indigo-800 m-auto flex flex-col items-center md:my-20 md:rounded-lg">
         <div className="w-[90%] my-5">
           <input
           onKeyDown={()=>addtodo(event)}
@@ -128,7 +128,7 @@ function deleteTodoFunc(todouuid){
         <button
           onClick={addhandler}
           type="button"
-          className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[20%] h-[50px]"
+          className=" bg-white text-indigo-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[20%] h-[50px]"
         >
           Add
         </button>
@@ -152,9 +152,9 @@ function deleteTodoFunc(todouuid){
 
       {/* multiLanguage app */}
 
-      <div className="flex flex-row justify-center items-center text-center   text-[20px] my-10">
+      {/* <div className="flex flex-row justify-center items-center text-center   text-[20px] my-10">
       <div className=" bg-blue-500 p-5 rounded-md"><Link href="/multiLanguage/" >Language_application </Link></div>
-        </div>
+        </div> */}
         {/* End Language app */}
 
 

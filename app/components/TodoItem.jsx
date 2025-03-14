@@ -31,14 +31,14 @@ function editmode_keydown(event){
     defaultValue={todo.title}
     onKeyDown={()=>editmode_keydown(event)}
     type="text"
-    className=" bg-orange-400 text-white text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white text-[20px]"
+    className=" bg-blue-400 text-white text-[20px] rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white "
   /></>)
 
 
 
 
 :(<>
-                <div key={todo.uuid} className="flex flex-row justify-between bg-green-300 h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
+                <div key={todo.uuid} className="flex flex-row justify-between bg-white h-[40px] text-[20px] gap-3 items-center px-3 rounded-md">
               <div className={`text-left ${todo.status ? "line-through  " : ""}`}>
 
                <input checked={todo.status} type="checkbox" onChange={()=>{statushandler(todo.uuid)}} />     {todo.id} - {todo.title}
